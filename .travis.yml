@@ -3,5 +3,8 @@ language: node_js
 node_js: 
   - "8.10.0"
 
-script: 
-  - "npm run coverage"
+script:
+  - npm run test
+
+after_success:
+ - npm run coverage

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "mocha test",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "npm run cover --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
